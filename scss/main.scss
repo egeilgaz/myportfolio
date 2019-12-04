@@ -1,6 +1,209 @@
-$primary-color: #444;
+@import 'config' ;
+@import 'menu';  
+    
+
+* {
+    box-sizing: border-box;
+}
 
 body {
-  background: $primary-color;
-  color: #fff;
+    @include background() ;
+    background: $primary-color ; 
+    color : set-text-color($primary-color) ;     
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5 ;
+    width: 100% ;
+
 }
+
+//heading
+
+h1, h2 , h3 {
+        margin: 0;
+        font-weight: 400 ;
+ 
+        &.lg-heading {   
+
+            font-size: 4rem ; //ana başlığın boyutu rem html fontunun katı 
+
+        }
+    &.sm-heading{ //ara başlık
+        margin-bottom: 2rem ;  
+        padding: 0.2rem 1rem ;   
+        background:rgba( lighten($primary-color, 2),0.5 ) ; //ana renkle olan fark tonu
+    }
+}
+
+a{
+    color: #fff; //link renkleri
+    text-decoration: none; //linklerin altındaki çizginin gitmesi
+
+}
+header {
+    position: fixed ; //menünün hep üste kalması
+    z-index: 2;
+    width: 100% ;
+}
+
+.text-secondary {
+    color: $secondary-color ; //yazıda ikinci rengi kullanma
+
+}
+main {
+    padding: 4rem ;
+    //height: 100% ;
+    min-height: calc(100vh - 60px);
+    .icons{
+        margin-top: 1rem ;
+
+        a {
+            padding: 0.4 rem ; 
+
+            &:hover{
+                color: $secondary-color; //imleç üstüne gidince oluşacak renk
+                @include easeout() ;      
+            }
+        }
+    }
+    &#home {
+        overflow: hidden ;
+        h1{
+
+            margin-top: 20vh ;
+        }
+    }
+
+}
+
+//hakkında sayfası cssleri
+
+.about-info {
+    display: grid;
+    grid-gap: 30px ;
+    grid-template-areas:
+    'bioimage bio bio'
+    'job1 job2 job3';
+    grid-template-columns: repeat(3,1fr);  
+}
+
+.bio-image{
+    grid-area: bioimage;
+    width: 250px;
+    height: 250px;
+    margin: auto ;
+    border-radius: 50%;
+    border: $secondary-color 3px solid ;
+}
+
+.bio {
+    grid-area: bio;
+    font-size: 1.5 rem ;
+    
+}
+
+.job1 {
+    grid-area: job1
+    
+}
+
+.job2 {
+    grid-area: job2
+}
+
+.job3 {
+    grid-area: job3
+}
+.job4 {
+    grid-area: job4
+}
+
+.job {
+    background: lighten($primary-color , 5);
+    padding: 0.5rem;
+    border-bottom:  $secondary-color 5px solid ;
+}
+
+//projelerin css
+.projects {
+    display: grid;
+    grid-gap: 0.7rem ; //aradaki boşluk
+    grid-template-columns: repeat(3,1fr) ; //en fazla 3 tane yanyana
+    
+    
+    img{
+        width: 100% ;
+        height: 300px ;
+        border: 3px #FF7F00 solid ;
+        //&:hover {
+           // opacity: 0.5;
+           // border-color: $secondary-color ;
+           // @include easeout ;
+        //}
+    }
+}
+
+//iletişim bigileri css i
+
+.boxes {//kutu konumları
+    display: flex ;
+    flex-wrap: wrap;
+    justify-content: space-evenly ;
+    align-items: center;
+    margin-top: 1rem ;
+
+    div{
+        font-size: 2rem;
+        border: 3px #fff solid;
+        padding: 1.5rem 2.5rem ;
+        margin-top: 3rem;
+        @include easeout;
+
+        &:hover{//kutuların üstüne gelince boyut ve renk değişikliği için
+            padding: 0.5rem 1.5rem;
+            background: $secondary-color;
+            color: set-text-color($secondary-color);
+            span{
+                color: #FF7F00 ;
+            }
+        }
+    }
+}
+
+//buton tipleri
+
+.btn {
+
+    display: block; //alt alta
+    padding: 0.5rem 1rem ;
+    border : 0;
+    margin-bottom: 0.3rem ;
+    &:hover {
+        background: $secondary-color ;
+        color: set-text-color($secondary-color);
+        @include easeout ;  
+    }
+    
+}
+.btn-dark{
+    @extend .btn ;
+    background: darken($primary-color, 50);
+    color: #fff ;
+
+}
+.btn-light {
+    @extend .btn ;
+    background: lighten($primary-color, 50);
+    color: #333
+}
+
+#main-footer {//footer kısmı için
+    text-align: center;
+    padding: 1rem ;
+    background: darken($primary-color , 10);
+    color: set-text-color($primary-color);
+    height: 60px ;  
+}
+
+@import 'mobile';
