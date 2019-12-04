@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+      integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Projeler</title>
+  </head>
+  <body>
+    <header>
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <!--menü tuşundaki çizgiler için-->
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+      </div>
+      <nav class="menu">
+        <div class="menu-branding">
+          <div class="portrait"></div>
+        </div>
+        <ul class="menu-nav">
+          <li class="nav-item  ">
+            <a href="index.html" class="nav-link">
+              ana sayfa
+            </a>
+          </li>
+          <li class="nav-item  ">
+            <a href="hakkında.html" class="nav-link">
+              hakkında
+            </a>
+          </li>
+          <li class="nav-item current">
+            <a href="projeler.html" class="nav-link">
+              projeler
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="iletisim.html" class="nav-link">
+              iletisim
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="work">
+      <h1 class="lg-heading">
+        Biten <span class="text-secondary">Projeler</span>
+      </h1>
+      <h2 class="sm-heading">
+        Bilgisayar mühendisliğinin olmazsa olmazları projelerdir. Üniversite
+        döneminde büyük ve küçük çaplı birçok projede bulundum.Yaptığım
+        projeleri buraya yüklemeye devam edeceğim. Bunlardan bazıları
+        aşağıdadır.
+      </h2>
+      <div class="projects">
+        <div class="item">
+          <img src="./img/projects/proje1.png" alt="" />
+
+          <a class="btn-light">
+            <p>
+              Hem okuldaki proje dersi için hem de makine öğrenmesini merak
+              ettiğim için arkadaşımla beraber plaka bulma projesi yaptık.Bu
+              projedeki asıl amaç fotoğraf, video ve canlı olarak görüntülerdeki
+              plakayı bulup bir çerçeve içine almaktı.
+            </p>
+            <p>
+              Bu projede Googles Object Detection modelinde Faster r-CNN
+              kullandık.Bu model sayesinde makineye 55bin adım sonunda plaka
+              sınıfını öğretmiş olduk.
+            </p>
+          </a>
+        </div>
+        <div class="item">
+          <img src="./img/projects/proje2.png" alt="" />
+
+          <a class="btn-light">
+            İlk projenin devamı olarak geliştirdiğimiz bu projede amacımız
+            plakaları bulup onların okunup veritabanına kaydetmektir. Bu projede
+            plakadaki karakterlerin bulunup okunması için image processing
+            kullandık. Veritabanı olarak ise Mysql kullandık.
+          </a>
+        </div>
+        <div class="item">
+          <img src="./img/projects/websitesi.png" alt="" />
+
+          <a class="btn-light">
+            Aslında bu projenin amacı şuanda bulunduğunuz siteyi yapmaktı. Bu
+            projeyi yaparen HTML SCSS çok küçük de olsa JS ve siteyi canlı hale
+            getirmek için git komutlarını kullandım.
+          </a>
+        </div>
+        <div class="item">
+          <img src="./img/projects/makc.png" alt="" />
+
+          <a class="btn-light">
+            Yapımında HTML, CSS ve JS kullandığım bir restoran tanıtım sitesi.
+            MakCo adlı restoran hakkında bilgilerin bulunduğu bir internet
+            sitesidir.
+          </a>
+        </div>
+        <div class="item">
+          <img src="./img/projects/datting.png" alt="" />
+
+          <a class="btn-light">
+            Dating App .Net Core ve Angular kullanarak yaptığım bir web
+            uygulaması. insanların kayıt olup giriş yapabildiği, çeşitli
+            filtreler kullanarak diğer insanları aradığı kendi profilindeki
+            bilgileri güncelleyebildiği bir web uygulamasıdır.
+          </a>
+        </div>
+        <div class="item">
+          <img src="./img/projects/mvc.jpg" alt="" />
+
+          <a class="btn-light">
+            Hasta Kayıt Sistemi .Net Core MVC kullanarak yapım aşamasında olan
+            bu sitede hastalar kayıt edilecek düzenlenebilecek ve silinebilecek.
+            Hasta kayıtları isme göre filtrelenecek ve yapılan işlemler kayıt
+            edilecek.
+          </a>
+        </div>
+      </div>
+    </main>
+    <footer id="main-footer">Copyright &copy; 2019</footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
